@@ -80,7 +80,6 @@ class Peliculascreen extends StatelessWidget {
             const SizedBox(height: 40,),
             const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text('Sinopsis', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
                 Text('Nostrud duis pariatur culpa adipisicing deserunt adipisicing minim enim anim commodo officia pariatur quis laboris. Laboris voluptate eu sint qui fugiat aliqua sunt eiusmod amet culpa cupidatat duis amet sint. Dolor velit aliquip veniam ad. Adipisicing eu labore anim commodo ad nostrud quis occaecat quis eu sint sunt. Cupidatat adipisicing consectetur elit duis aliquip sit id laboris minim.')
