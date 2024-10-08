@@ -53,15 +53,18 @@ class Peliculascreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                const Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      
-                      Text('120 min'),
-                      Text('1990'),
-                      Text('Acción Drama Arte')
-                    ],
+                Container(
+                  color: Colors.yellow,
+                  child: const Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        
+                        Text('120 min'),
+                        Text('1990'),
+                        Text('Acción Drama Arte')
+                      ],
+                    ),
                   ),
                 )
               ],
