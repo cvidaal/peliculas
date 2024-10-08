@@ -30,6 +30,7 @@ class Peliculascreen extends StatelessWidget {
               height: 20,
             ),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Column(
                   children: [
@@ -59,10 +60,20 @@ class Peliculascreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        
-                        Text('120 min'),
-                        Text('1990'),
-                        Text('Acción Drama Arte')
+                        Row(
+                          children: [
+                            Icon(Icons.home),
+                            SizedBox(width: 10,),
+                            Icon(Icons.home),
+                            SizedBox(width: 10,),
+                            Icon(Icons.home),
+                            SizedBox(width: 10,),
+                            Icon(Icons.home),
+                          ],
+                        ),
+                        Text('120 min', style: TextStyle(fontSize: 20),),
+                        Text('1990', style: TextStyle(fontSize: 20),),
+                        Text('Acción Drama Arte', style: TextStyle(fontSize: 20),)
                       ],
                     ),
                   ),
