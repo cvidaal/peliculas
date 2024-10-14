@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:peliculas/screens/homescreen.dart';
 import 'package:peliculas/screens/peliculascreen.dart';
 
 void main() {
