@@ -24,12 +24,17 @@ class AppbarHome extends StatelessWidget implements PreferredSizeWidget {
           //Para poner objetos en la derecha
           BotonOpciones()
         ],
-        leading: const Icon(
-          Icons.home_filled,
-          color: Colors.white,
-          size: 35,
-        ), //Para poner 1 objeto en la izquierda.
-      );
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pushNamed('home'); // Ruta para ir al home
+          },
+          icon: const Icon(
+            Icons.home_max_rounded,
+            color: Colors.white,
+            size: 35,
+            ),
+          )
+        ); //Para poner 1 objeto en la izquierda
   }
   
 }
