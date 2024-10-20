@@ -33,7 +33,10 @@ class Pelicula{
     return Pelicula(
         adultos: json["adult"],
         backdropPath: json["backdrop_path"],
-        generos: List<String>.from(json["genres"].map((genero) => genero.name)),
+        generos: json["genres"] != null
+            ? List<String>.from(
+                json["genres"].map((genero) => genero["name"] ?? ('')))
+            : [],
         idpelicula: json["id"],
         tituloOriginal: json["original_title"],
         sinopsis: json['overview'],

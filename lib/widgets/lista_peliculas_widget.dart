@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:peliculas/widgets/portada_widget.dart';
 
+import '../entities/pelicula.dart';
+
 class ListaPeliculasWidget extends StatelessWidget {
   final String titulo;
-  const ListaPeliculasWidget(this.titulo, {super.key});
+    final List<Pelicula> peliculas;
+  
+  const ListaPeliculasWidget(this.titulo, this.peliculas, {super.key, });
 
   @override
   Widget build(BuildContext context) {
@@ -18,32 +22,28 @@ class ListaPeliculasWidget extends StatelessWidget {
                 titulo,
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Colors.deepOrange,
+                  color: Colors.blueAccent,
                   fontSize: 17,
                 ),
               ),
-              const Text("Ver todas"),
+              TextButton(
+                onPressed: (){},
+                child: const Text("Ver todas", style: TextStyle(fontSize: 16, color: Colors.black54),)),
             ],
           ),
           //! IMPORTANTE SABERSELO
-          const SingleChildScrollView(
+          SingleChildScrollView(
             //Para que quepan los container y no aparezca el aviso de OVERFLOW
             scrollDirection: Axis.horizontal, //Permite hacer scrollDirection
             child: Row(
-              children: [
-                PortadaWidget(),
-                PortadaWidget(),
-                PortadaWidget(),
-                PortadaWidget(),
-                PortadaWidget(),
-              ],
+              children: peliculas.isNotEmpty
+                    ? peliculas
+                        .map((pelicula) => PortadaWidget(pelicula)).toList()
+                    : [const Text('No hay peliculas disponibles')]),
             ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-        ],
-      ),
+        ]
+      )
     );
+      
   }
 }

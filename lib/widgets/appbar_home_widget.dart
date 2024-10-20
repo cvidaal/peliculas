@@ -12,21 +12,20 @@ class AppbarHome extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
         title: const Text(
-          'PELICULAS',
+          'FilmFinder',
           style: TextStyle(
-              fontWeight: FontWeight.bold, color: Colors.white, fontSize: 30),
+             color: Colors.white, fontSize: 30, fontWeight: FontWeight.w500,),
         ),
+        backgroundColor: Colors.blueAccent,
         centerTitle: true,
-        backgroundColor: Colors.deepOrange,
-        shadowColor: Colors.black, //Color d ela sombra
-        elevation: 5, // Sombra
+        shadowColor: Colors.black, //Color d ela sombra // Sombra
         actions: const [
           //Para poner objetos en la derecha
           BotonOpciones()
         ],
         leading: IconButton(
           onPressed: () {
-            Navigator.of(context).pushNamed('home'); // Ruta para ir al home
+              Navigator.pushNamed(context, 'homescreen');
           },
           icon: const Icon(
             Icons.home_max_rounded,

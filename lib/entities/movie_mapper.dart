@@ -1,19 +1,19 @@
 import 'dart:convert';
 import 'pelicula.dart';
 
-class Populares {
+class MovieMapper {
     final int pagina;
     final List<Pelicula> resultados;
 
 
-    Populares({
+    MovieMapper({
         required this.pagina,
         required this.resultados,
     });
 
-    factory Populares.fromRawJson(String str) => Populares.fromJson(json.decode(str));
+    factory MovieMapper.fromRawJson(String str) => MovieMapper.fromJson(json.decode(str));
 
-    factory Populares.fromJson(Map<String, dynamic> json) => Populares(
+    factory MovieMapper.fromJson(Map<String, dynamic> json) => MovieMapper(
         pagina: json["page"],
         resultados: List<Pelicula>.from(json["results"].map((pelicula) => Pelicula.fromJson(pelicula))),
     );
